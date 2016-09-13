@@ -20,4 +20,8 @@ public class Item{
     return cost;
   }
 
+  public boolean onSpecial(){
+    return offers;
+  }
+
 }

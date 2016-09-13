@@ -33,4 +33,14 @@ public class ItemTest{
   public void itemHasPrice__Cheese(){
     assertEquals(2, cheese.getPrice());
   }
+
+  @Test
+  public void itemIsOnSpecial__Daz(){
+    assertEquals(true, daz.onSpecial());
+  }
+
+  @Test
+  public void itemIsOnSpecial__Cheese(){
+    assertEquals(false, cheese.onSpecial());
+  }
 }
