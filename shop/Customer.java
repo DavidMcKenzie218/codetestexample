@@ -14,4 +14,8 @@ public class Customer{
     return name;
   }
 
+  public boolean hasLoyaltyCard(){
+    return loyaltyCard;
+  }
+
 }

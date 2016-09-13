@@ -24,4 +24,14 @@ public class CustomerTest{
     assertEquals("Frank", customer.getName());
   }
 
+  @Test
+  public void customerHasLoyaltyCard__Loyal(){
+    assertEquals(true, loyalCustomer.hasLoyaltyCard());
+  }
+
+  @Test
+  public void customerHasLoyaltyCard__Normal(){
+    assertEquals(false, customer.hasLoyaltyCard());
+  }
+
 }
