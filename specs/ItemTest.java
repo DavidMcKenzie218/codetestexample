@@ -23,4 +23,14 @@ public class ItemTest{
   public void itemHasName__Cheese(){
     assertEquals("Cheese", cheese.getName());
   }
+
+  @Test
+  public void itemHasPrice__Daz(){
+    assertEquals(4, daz.getPrice());
+  }
+
+  @Test
+  public void itemHasPrice__Cheese(){
+    assertEquals(2, cheese.getPrice());
+  }
 }
