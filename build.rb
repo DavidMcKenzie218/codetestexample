@@ -29,4 +29,3 @@ create_bin()
 valid_directories = filter_directories()
 
 run_tests(valid_directories)
-
