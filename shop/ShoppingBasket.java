@@ -67,6 +67,14 @@ public class ShoppingBasket{
   }
 
   public void applyDiscounts(){
-
+    for(Item duplicate: duplicates){
+      int counter = 0;
+      for (int itemNumber = 0; itemNumber < getSize(); itemNumber++){
+        if(duplicate == contents.get(itemNumber)){
+          counter ++;
+        }
+      }
+      totalCost -= (duplicate.getPrice() * (counter/2));
+    }
   }
 }
