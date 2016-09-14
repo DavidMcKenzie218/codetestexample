@@ -46,4 +46,10 @@ public class ShoppingBasketTest{
     assertEquals(2, basket.getSize());
   }
 
+  @Test
+  public void canCalculateTheBasketTotalCost(){
+    basket.addMoreThanOneItem(cheese, 2);
+    assertEquals(6, basket.getTotal());
+  }
+
 }
