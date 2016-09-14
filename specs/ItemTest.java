@@ -26,12 +26,12 @@ public class ItemTest{
 
   @Test
   public void itemHasPrice__Daz(){
-    assertEquals(4, daz.getPrice());
+    assertEquals(4.00, daz.getPrice(), 0.01);
   }
 
   @Test
   public void itemHasPrice__Cheese(){
-    assertEquals(2, cheese.getPrice());
+    assertEquals(2.00, cheese.getPrice(), 0.01);
   }
 
   @Test

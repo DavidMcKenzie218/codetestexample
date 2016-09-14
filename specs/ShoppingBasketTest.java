@@ -49,7 +49,7 @@ public class ShoppingBasketTest{
   @Test
   public void canCalculateTheBasketTotalCost(){
     basket.addMoreThanOneItem(cheese, 2);
-    assertEquals(6, basket.getTotal());
+    assertEquals(6.00, basket.getTotal(), 0.01);
   }
 
   @Test
@@ -63,14 +63,14 @@ public class ShoppingBasketTest{
   public void anApplyDiscounts__OnOffer(){
     basket.addMoreThanOneItem(daz, 2);
     basket.applyDiscounts();
-    assertEquals(5, basket.getTotal());
+    assertEquals(5.00, basket.getTotal(), 0.01);
   }
 
   @Test
   public void anApplyDiscounts__NotOnOffer(){
     basket.addMoreThanOneItem(cheese, 2);
     basket.applyDiscounts();
-    assertEquals(6, basket.getTotal());
+    assertEquals(6.00, basket.getTotal(), 0.01);
   }
 
   @Test
@@ -83,7 +83,21 @@ public class ShoppingBasketTest{
   public void discountOverTwenty(){
     basket.addMoreThanOneItem(cheese, 7);
     basket.moneyOffOverTwenty();
-    assertEquals(19, basket.getTotal());
+    assertEquals(18.90, basket.getTotal(), 0.01);
+  }
+
+  @Test
+  public void loyaltyCardDiscount__No(){
+    basket.addMoreThanOneItem(cheese, 3);
+    basket.applyLoyaltyCard();
+    assertEquals(9.00, basket.getTotal(), 0.01);
+  }
+
+  @Test
+  public void loyaltyCardDiscount__Yes(){
+    loyalBasket.addMoreThanOneItem(cheese, 3);
+    loyalBasket.applyLoyaltyCard();
+    assertEquals(8.82, loyalBasket.getTotal(), 0.01);
   }
 
 }

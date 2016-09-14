@@ -3,10 +3,10 @@ package shop;
 public class Item{
 
   private String name;
-  private int cost;
+  private float cost;
   private boolean offers;
 
-  public Item(String name, int cost, boolean offer){
+  public Item(String name, float cost, boolean offer){
     this.name = name;
     this.cost = cost;
     this.offers = offer;
@@ -16,7 +16,7 @@ public class Item{
     return name;
   }
 
-  public int getPrice(){
+  public float getPrice(){
     return cost;
   }
 

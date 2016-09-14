@@ -7,7 +7,7 @@ public class ShoppingBasket{
   private Customer customer;
   private ArrayList<Item> contents; 
   private ArrayList<Item> duplicates;
-  private int totalCost;
+  private float totalCost;
 
 
   public ShoppingBasket(Customer customer){
@@ -58,7 +58,7 @@ public class ShoppingBasket{
   }
 
 
-  public int getTotal(){
+  public float getTotal(){
     return totalCost;
   }
 
@@ -83,6 +83,12 @@ public class ShoppingBasket{
   public void moneyOffOverTwenty(){
     if(totalCost>20){
       totalCost -= (totalCost/10);
+    }
+  }
+
+  public void applyLoyaltyCard(){
+    if(customer.hasLoyaltyCard() == true){
+      totalCost -= ((totalCost/100)*2);
     }
   }
 }
