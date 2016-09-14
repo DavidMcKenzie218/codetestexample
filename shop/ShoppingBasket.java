@@ -38,4 +38,8 @@ public class ShoppingBasket{
     return totalCost;
   }
 
+  public void emptyContents(){
+    contents.clear();
+  }
+
 }
