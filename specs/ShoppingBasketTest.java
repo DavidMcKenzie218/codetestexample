@@ -29,4 +29,9 @@ public class ShoppingBasketTest{
     assertEquals("Fred", basket.getOwnerName());
   }
 
+  @Test
+  public void customerBAsketIsEmpty__Normal(){
+    assertEquals(0, basket.getSize());
+  }
+
 }
