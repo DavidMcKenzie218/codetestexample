@@ -34,4 +34,10 @@ public class ShoppingBasketTest{
     assertEquals(0, basket.getSize());
   }
 
+  @Test
+  public void itemHasBeenAddedToBasket__Normal(){
+    basket.addItem(cheese);
+    assertEquals(1, basket.getSize());
+  }
+
 }

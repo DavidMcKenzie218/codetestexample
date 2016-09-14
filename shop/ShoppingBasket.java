@@ -20,4 +20,8 @@ public class ShoppingBasket{
     return contents.size();
   }
 
+  public void addItem(Item item){
+    contents.add(item);
+  }
+
 }
