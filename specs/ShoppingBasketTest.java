@@ -40,4 +40,10 @@ public class ShoppingBasketTest{
     assertEquals(1, basket.getSize());
   }
 
+  @Test
+  public void canAddMultipleItemsAtOnce(){
+    basket.addMoreThanOneItem(cheese, 2);
+    assertEquals(2, basket.getSize());
+  }
+
 }

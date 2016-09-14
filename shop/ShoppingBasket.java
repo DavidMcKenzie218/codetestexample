@@ -24,4 +24,10 @@ public class ShoppingBasket{
     contents.add(item);
   }
 
+  public void addMoreThanOneItem(Item item, int numberOfItems){
+    for(int itemNumber = 0; itemNumber < numberOfItems; itemNumber++){
+      contents.add(item);
+    }
+  }
+
 }
