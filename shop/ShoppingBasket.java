@@ -79,4 +79,10 @@ public class ShoppingBasket{
       }
     }
   }
+
+  public void moneyOffOverTwenty(){
+    if(totalCost>20){
+      totalCost -= (totalCost/10);
+    }
+  }
 }

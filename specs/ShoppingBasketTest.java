@@ -73,11 +73,17 @@ public class ShoppingBasketTest{
     assertEquals(6, basket.getTotal());
   }
 
-
   @Test
   public void duplicateCountIsWorking(){
     basket.addMoreThanOneItem(daz, 2);
     assertEquals(1, basket.getDuplicateSize());
+  }
+
+  @Test
+  public void discountOverTwenty(){
+    basket.addMoreThanOneItem(cheese, 7);
+    basket.moneyOffOverTwenty();
+    assertEquals(19, basket.getTotal());
   }
 
 }
