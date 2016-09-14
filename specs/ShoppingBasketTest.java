@@ -60,11 +60,19 @@ public class ShoppingBasketTest{
   }
 
   @Test
-  public void anApplyDiscounts(){
+  public void anApplyDiscounts__OnOffer(){
     basket.addMoreThanOneItem(daz, 2);
     basket.applyDiscounts();
     assertEquals(5, basket.getTotal());
   }
+
+  @Test
+  public void anApplyDiscounts__NotOnOffer(){
+    basket.addMoreThanOneItem(cheese, 2);
+    basket.applyDiscounts();
+    assertEquals(6, basket.getTotal());
+  }
+
 
   @Test
   public void duplicateCountIsWorking(){

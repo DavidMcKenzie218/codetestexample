@@ -74,7 +74,9 @@ public class ShoppingBasket{
           counter ++;
         }
       }
-      totalCost -= (duplicate.getPrice() * (counter/2));
+      if(duplicate.onSpecial() == true){
+        totalCost -= (duplicate.getPrice() * (counter/2));
+      }
     }
   }
 }
